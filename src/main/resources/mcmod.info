@@ -1,0 +1,16 @@
+[
+{
+  "modid": "QVBACalculator",
+  "name": "Calculator",
+  "description": "Adds a functioning calculator to minecraft.",
+  "version": "1.0",
+  "mcversion": "${mcversion}",
+  "url": "http://github.com/QVBA",
+  "updateUrl": "",
+  "authorList": ["Roxox1/QVBA"],
+  "credits": "zmaster587 http://github.com/zmaster587",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
