@@ -71,12 +71,7 @@ public class CalculatorGui extends GuiScreen{
 		}else if(key.equals("=")){
 			text.setText(String.valueOf(eval(text.getText())));
 		}else {
-			if(firstTyped) {
-				text.setText(key);
-				firstTyped = false;
-			}else {
-				text.setText(text.getText() + key);
-			}
+			addText(key);
 		}
 	}
 	
@@ -86,37 +81,51 @@ public class CalculatorGui extends GuiScreen{
 	public void drawScreen(int a, int b, float c) {
 		super.drawScreen(a, b, c);
 		text.drawTextBox();
-		
+	}
+	
+	protected void keyTyped(char character, int a) {
+		if(Character.isDigit(character)) {
+			addText(String.valueOf(character));
+		}
+	}
+	
+	private void addText(String number) {
+		if(firstTyped) {
+			text.setText(number);
+			firstTyped = false;
+		}else {
+			text.setText(text.getText() + number);
+		}
 	}
 	
 	public String getKeyFromID(int id) {
 		switch(id) {
 		case 0: //7
-			return String.valueOf(7);
+			return "7";
 		case 1: //8
-			return String.valueOf(8);
+			return "8";
 		case 2: //9
-			return String.valueOf(9);
+			return "9";
 		case 3: // '/'
 			return "/";
 		case 4: //4
-			return String.valueOf(4);
+			return "4";
 		case 5: //5
-			return String.valueOf(5);
+			return "5";
 		case 6: //6
-			return String.valueOf(6);
+			return "6";
 		case 7: // '*'
 			return "*";
 		case 8: //1
-			return String.valueOf(1);
+			return "1";
 		case 9: //2
-			return String.valueOf(2);
+			return "2";
 		case 10: //3
-			return String.valueOf(3);
+			return "3";
 		case 11: //+
 			return "+";
 		case 12: //0
-			return String.valueOf(0);
+			return "0";
 		case 13: //.
 			return ".";
 		case 14: //C

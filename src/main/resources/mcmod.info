@@ -3,7 +3,7 @@
   "modid": "QVBACalculator",
   "name": "Calculator",
   "description": "Adds a functioning calculator to minecraft.",
-  "version": "1.0",
+  "version": "1.1",
   "mcversion": "${mcversion}",
   "url": "http://github.com/QVBA",
   "updateUrl": "",
